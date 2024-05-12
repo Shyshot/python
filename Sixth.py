@@ -10,11 +10,11 @@
     fun_name(param1,param2,.....) #function call
 
 '''
-def sum(a,b):
+def cal_sum(a,b):
     sum = a+b
     print(a+b)
 
-sum(1,2)
-sum(6,9)
-sum(7,8)
+cal_sum(1,2)
+cal_sum(6,9)
+cal_sum(7,8)
 
