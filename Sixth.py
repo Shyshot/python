@@ -66,6 +66,7 @@ set = {12,58,57,57,47}
 # display(tup)
 
 
+
 # def fact(a):
 #     i=1
 #     while i<a:
@@ -75,4 +76,13 @@ set = {12,58,57,57,47}
 
 # fact(3)
 
-
+#FIXME: Recursion
+'''When a function call itself repeatedly'''
+def show(n):
+    if(n!=0):
+        print(n)
+        show(n-1)
+    else:
+        print("That's it dekh  kya raha hai")
+    
+show(69)
