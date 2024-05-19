@@ -79,10 +79,9 @@ set = {12,58,57,57,47}
 #FIXME: Recursion
 '''When a function call itself repeatedly'''
 def show(n):
-    if(n!=0):
-        print(n)
-        show(n-1)
-    else:
-        print("That's it dekh  kya raha hai")
+    if(n==0):
+        return
+    print(n)
+    show(n-1)
     
 show(69)
