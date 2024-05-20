@@ -1,6 +1,7 @@
 #TODO: File Input Output
 
 
+from dataclasses import dataclass
 from distutils.command.sdist import sdist
 from fileinput import close
 
@@ -47,4 +48,48 @@ from fileinput import close
 
 # f = open("newDemo.txt","w")         If a file opened with write or append method it creates a new file 
 
+#FIXME: with syntax
 
+'''This is a modular style or block style of writing file input and output'''
+
+# with open("demmo.txt","r") as f:
+#   data = f.read()
+#   print(data)
+
+# import os
+
+# os.remove("demmo.txt")
+
+#FIXME: Practice Questions
+
+# f = open("practice.txt","r")
+
+# f.write("Hii Everyone")
+# f.write("\nwe are learing fie I/O")
+# f.write("\nusing python")
+# f.write("\nI like programming in python")
+# data=f.read()
+# newData = data.replace("python","Java")
+# f.close()
+
+# r = open("practice.txt","w")
+# r.write(newData)
+
+# data = f.read()
+
+# if(data.find("learning") != -1):
+#   print("Mil gaya")
+# else:
+#    print("Naah nahi hai")
+# word = "learning"
+# word2 = "Java"
+# def CheckForWord(W):
+#   f = open("practice.txt","r")
+#   data = True
+#   lineNo = 1
+#   while data:
+#     data = f.readline()
+#     if(data.find(W) != -1):
+#       print("The Word is found in line No",lineNo)
+#     lineNo +=1
+# CheckForWord(word2)
