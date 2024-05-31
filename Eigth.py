@@ -1,4 +1,4 @@
-#TODO: OOPS
+#TODO: OOPS (Class,Object,Constructor,Attributes,Methods,Abstraction, Encapsulation)
 
 '''To map with real world scennarios, we started, we started using objects in code
     This is called object oriented programming
@@ -154,7 +154,7 @@ class Account :
         print("Ammount",amm,"was Debited from",self.account_no)
         print("Remaining Balance",self.balance)
     def credit(self,amm):
-        self.balance =+ amm
+        self.balance += amm
         print("Ammount",amm,"was Credited from",self.account_no)
         print("Remaining Balance",self.balance)
 
