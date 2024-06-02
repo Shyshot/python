@@ -58,24 +58,42 @@
 
 #TODO: Multi - level Inheritence
 
-from typing import Type
+# from typing import Type
 
 
-class Car:
-    def start(self):
-        print("Car has Started...")
-    def stop(self):
-        print("Car has Stopped...")
+# class Car:
+#     def start(self):
+#         print("Car has Started...")
+#     def stop(self):
+#         print("Car has Stopped...")
     
-class Toyota(Car):              
-    def __init__(self):
-        self.Brand = "Toyota"
-    
-class Fortuner(Toyota):
-    def __init__(self,type):
-        self.type = type
+# class Toyota(Car):    
+#     brand = "Toyota"          
+#     def __init__(self):
+#         self.Brand = "Toyota"   
+# class Fortuner(Toyota):
+#     def __init__(self,type):
+#         self.type = type
 
-car1 = Fortuner("Diesel")
+# car1 = Fortuner("Diesel")
 
-# print(car1.Brand)   #Inheritence does not inherit the Attributes or Methods Defined in Constructor
-car1.start()
+# print(car1.brand)   
+# # print(car1.Brand)   #Inheritence does not inherit the Attributes or Methods Defined in Constructor
+# car1.start()
+
+
+#TODO: Multiple Inheritence
+
+class A :
+    varA = "Welcome to class A"
+
+class B :
+    varB = "Welcome to class B"
+
+class C (A,B):
+    varC ="Welcome to class C"
+
+s1 =   C()
+print(s1.varA) 
+print(s1.varB) 
+print(s1.varC) 
