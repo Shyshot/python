@@ -84,16 +84,43 @@
 
 #TODO: Multiple Inheritence
 
-class A :
-    varA = "Welcome to class A"
+# class A :
+#     varA = "Welcome to class A"
 
-class B :
-    varB = "Welcome to class B"
+# class B :
+#     varB = "Welcome to class B"
 
-class C (A,B):
-    varC ="Welcome to class C"
+# class C (A,B):
+#     varC ="Welcome to class C"
 
-s1 =   C()
-print(s1.varA) 
-print(s1.varB) 
-print(s1.varC) 
+# s1 = C()
+# print(s1.varA) 
+# print(s1.varB) 
+# print(s1.varC) 
+
+
+
+
+#FIXME: Super Method
+
+"""super() method is used to access methods of the parent class"""
+
+class Car:
+    def __init__(self,type):
+        self.type = type
+    def start(self):
+        print("Car Started")
+    def stop(self):
+        print("Car has stopped")
+    
+class Toyota(Car):
+    def __init__(self,brand,type):
+        self.brand = brand
+
+
+car1 = Toyota("Pirus")
+
+print(car1.type)
+
+
+
