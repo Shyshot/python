@@ -105,22 +105,45 @@
 
 """super() method is used to access methods of the parent class"""
 
-class Car:
-    def __init__(self,type):
-        self.type = type
-    def start(self):
-        print("Car Started")
-    def stop(self):
-        print("Car has stopped")
+# class Car:
+#     def __init__(self,type):
+#         self.type = type
+#     def start(self):
+#         print("Car Started")
+#     def stop(self):
+#         print("Car has stopped")
     
-class Toyota(Car):
-    def __init__(self,brand,type):
-        self.brand = brand
+# class Toyota(Car):
+#     def __init__(self,brand,type):
+#         super().__init__(type)
+#         self.brand = brand
+#         super().start()
+
+# car1 = Toyota("Pirus","Diesel")
 
 
-car1 = Toyota("Pirus")
+# print(car1.type)
 
-print(car1.type)
+#FIXME: Class Method
+
+"""A class method is bound to the class & receives the class as an implicitfirst argument.
+Note - Static method can't access or modify class state & generally for utility
+"""
+
+class person:
+    name ="Annonymous"
+
+    def changeName(self,name):  #Here tha Name is Not Changed but a new Variable is Declared for the scope of the person 
+        self.name = name
+    
+p1 = person()
+p1.changeName("Piyush")
+print(p1.name)      #The name Variable in the object is Piyush
+print(person.name)      #But it is Still Annonymous in the class person
 
 
+class Student:
+    @classmethod 
+    def college(cls):
+        pass    
 

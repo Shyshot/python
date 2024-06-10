@@ -110,7 +110,7 @@
 """Decorators allow us to wrap another function in order to extend the behaviour of the wrapped function, without permanently modifying it"""
 
 #FIXME: Abstraction
-"""Hiding the implementation details of a class and only showing the essential featires to the user."""
+"""Hiding the implementation details of a class and only showing the essential features to the user."""
 
 # class car:
 #     def __init__(self):
