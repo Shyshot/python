@@ -130,20 +130,74 @@
 Note - Static method can't access or modify class state & generally for utility
 """
 
-class person:
-    name ="Annonymous"
+# class person:
+#     name ="Annonymous"
 
-    def changeName(self,name):  #Here tha Name is Not Changed but a new Variable is Declared for the scope of the person 
-        self.name = name
-    
-p1 = person()
-p1.changeName("Piyush")
-print(p1.name)      #The name Variable in the object is Piyush
-print(person.name)      #But it is Still Annonymous in the class person
+#     def changeName(self,name):  #Here the Name is Not Changed but a new Variable is Declared for the scope of the object 
+#         self.name = name
+        
+# p1 = person()
+# p1.changeName("Piyush")
+# print(p1.name)      #The name Variable in the object is Piyush
+# print(person. name)      #But it is Still Annonymous in the class person
 
+"""There are ways to change Class Values through a instance method"""
+#1.-->
+# class person:
+#     name ="Annonymous"
+
+#     def changeName(self,name):  
+#         person.name = name        Here the Variable is accessed directly at the class level thus has scope of the class
+        
+# p1 = person()
+# p1.changeName("Piyush")
+# print(p1.name)      #The name Variable in the object is Piyush
+# print(person.name)      #And name variable in the class has also Changed to Piyush
+
+#2.-->
+# class person:
+#     name ="Annonymous"
+
+#     def changeName(self,name):  
+#         self.__class__.name = name        Here the Variable iss accessed at class level using the class attribute
+        
+# p1 = person()
+# p1.changeName("Piyush")
+# print(p1.name)      #The name Variable in the object is Piyush
+# print(person. name)      #And name variable in the class has also Changed to Piyush
+
+"""The Value at the class can be changed using class method """
+
+# class Person:
+#     name ="Annonymous"
+#     @classmethod            #This Decorator is used access Variable and method at class level
+#     def changeName(cls,name):
+#         cls.name = name
+
+
+# p1 =Person()
+# p1.changeName("Piyush")
+# print(p1.name)
+# print(Person.name)
+
+
+#FIXME: Property Decorator
+
+"""We use @property decorator on any method in the class to use the method as a property"""
 
 class Student:
-    @classmethod 
-    def college(cls):
-        pass    
+    def __init__(self,phy,chem,maths):
+        self.phy = phy
+        self.chem = chem
+        self.maths = maths
+    
+    @property 
+    def percentage(self):
+        return str((self.phy+self.chem+self.maths)/3) + "%"
 
+s1 = Student(98,99,97)
+print(s1.percentage)
+
+s1.phy = 96
+
+print(s1.percentage)
